@@ -2,7 +2,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: {{ template "ethereum.fullname" . }}-geth-tx
+  name: {{ template "ethereum.fullname" . }}-geth-datadir
   labels:
     app: {{ template "ethereum.name" . }}
     chart: {{ template "ethereum.chart" . }}
