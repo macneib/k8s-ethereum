@@ -98,8 +98,7 @@ spec:
       volumes:
       - name: data
         persistentVolumeClaim:
-          claimName: {{ template "ethereum.fullname" . }}
-        emptyDir: {}
+          claimName: {{ template "ethereum.fullname" . }}-geth-datadir
       - name: config
         configMap:
           name: {{ template "ethereum.fullname" . }}-geth-config
